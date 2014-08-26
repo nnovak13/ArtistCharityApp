@@ -39,3 +39,25 @@ gem 'devise'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+gem 'dotenv-rails'
+
+gem 'foundation-icons-sass-rails'
+
+gem 'foundation-rails'
+
+
+group :development do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'rspec-rails'
+  gem 'rack-mini-profiler'
+end
+
+group :production do
+  gem 'rails_12factor'
+end
+
+gem 'bullet', group: :development
+
