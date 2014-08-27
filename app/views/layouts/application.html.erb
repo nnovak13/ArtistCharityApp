@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
+    <%= tag :meta, :name => "stripe-key", :content => ENV['PUBLISHABLE_KEY'] %>
     <%= csrf_meta_tags %>
   </head>
 
