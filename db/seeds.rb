@@ -24,6 +24,7 @@ end
 
 ### ITEMS
 
+
 #Gabby
 
 peel_earings = Item.create(artist_id: gabby.id, title: "Orange Peel Earings", price: 40.00, quantity_available: 15, desc: "Handcrafted by G. Lopez.", img_main: "../img/orange_peel_earings.jpg", img_thumb: "../img/orange_peel_earings.jpg")
