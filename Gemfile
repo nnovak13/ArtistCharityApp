@@ -47,6 +47,9 @@ gem 'foundation-icons-sass-rails'
 
 gem 'foundation-rails'
 
+gem 'paperclip'
+gem 'aws-sdk'
+
 
 group :development do
   gem 'pry-rails'
