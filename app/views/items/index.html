@@ -1,0 +1,11 @@
+<div class="large-8 columns">
+  <% @items.each do |i| %>
+    <ul>
+      <li>
+        <h3><%= i.title %></h3>
+        <%= i.price %> <br>
+        <%= i.desc %>
+      </li>
+    </ul>
+  <% end %>
+</div>

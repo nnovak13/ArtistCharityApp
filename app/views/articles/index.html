@@ -1,0 +1,10 @@
+<div class="large-8 columns">
+  <% @articles.each do |a| %>
+    <ul>
+      <li>
+        <h3><%= a.title %></h3>
+        <%= a.body %>
+      </li>
+    </ul>
+  <% end %>
+</div>
