@@ -1,0 +1,6 @@
+<div class="large-12 columns artist-square">
+  <h1> Artists </h1>
+  <% @artists.each do |a| %>
+    <%= link_to(image_tag(a.pic_thumb(:square), class:"artist-square"), artist_path(a)) %>
+  <% end %>
+</div>
