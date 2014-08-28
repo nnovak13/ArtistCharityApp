@@ -29,6 +29,7 @@ gem 'spring',        group: :development
 gem 'annotate'
 gem 'devise'
 gem 'activeadmin' , github: 'activeadmin'
+gem 'acts-as-taggable-on'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

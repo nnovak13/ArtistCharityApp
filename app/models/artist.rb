@@ -14,4 +14,5 @@
 
 class Artist < ActiveRecord::Base
   has_many :items
+  acts_as_taggable
 end

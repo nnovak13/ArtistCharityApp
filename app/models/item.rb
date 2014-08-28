@@ -12,13 +12,17 @@
 #  artist_id          :integer
 #  created_at         :datetime
 #  updated_at         :datetime
+#  pic_file_name      :string(255)
+#  pic_content_type   :string(255)
+#  pic_file_size      :integer
+#  pic_updated_at     :datetime
 #
 
 class Item < ActiveRecord::Base
   belongs_to :artist
+  acts_as_taggable
 
-
-  # This method associates the attribute ":avatar" with a file attachment
+  # This method associates the attribute ":pic" with a file attachment
   has_attached_file :pic, styles: {
     thumb: '100x100>',
     square: '200x200#',
