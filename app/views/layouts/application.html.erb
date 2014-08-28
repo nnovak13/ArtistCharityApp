@@ -4,27 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "SABES" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= tag :meta, :name => "stripe-key", :content => ENV['PUBLISHABLE_KEY'] %>
     <%= csrf_meta_tags %>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
 
 
-    <div class="">
+    <div class="sticky">
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class= "name">
-          <h1><%= link_to root_path do %><i class=""></i>Sabes<% end %></h1>
+          <h1><%= link_to root_path do %></i>SABES<% end %></h1>
         </li>
-        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        <li class="toggle-topbar menu-icon"><a href="#"></i><span></span></a></li>
       </ul>
       <section class="top-bar-section">
         <ul class="right">
+        <li><%= link_to 'Artists', artists_path %></li>
+        <li><%= link_to 'Articles', articles_path %></li>
+        <li><%= link_to 'Items', items_path %></li>
           <% if user_signed_in? %>
             <li class="has-dropdown">
               <%= link_to "#" do %>
@@ -36,8 +41,8 @@
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "Sign up", new_user_registration_path, class: "small button radius" %></li>
-            <li><%= link_to "Login", new_user_session_path %></li>
+            <li class = "sign"><%= link_to "Sign up", new_user_registration_path %></li>
+            <li lass = "sign"><%= link_to "Login", new_user_session_path %></li>
           <% end %>
         </ul>
       </section>
@@ -45,6 +50,12 @@
   </div>
 
     <%= yield %>
+
+
+    <footer id="footer", class="text-center">
+      By <%= link_to "Brian", "https://github.com/brimatteng", target: "_blank" %> & <%= link_to "Nick", "https://github.com/nnovak13", target: "_blank" %>
+    </footer>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
