@@ -2,6 +2,7 @@
   <% @articles.each do |a| %>
     <ul>
       <li>
+        <%= image_tag(a.pic(:large)) %>
         <h3><%= a.title %></h3>
         <%= a.body %>
       </li>
