@@ -12,14 +12,13 @@ ActiveAdmin.register Artist do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   form do |f|
-    f.inputs "Item Details" do
+    f.inputs "Artist Details" do
       f.input :name
       f.input :bio
       f.input :contact_email
 
       f.input :pic_main, :required =>false, :as => :file
       f.input :pic_thumb, :required =>false, :as => :file
-      # Will preview the image when the object is edited
     end
     f.actions
   end

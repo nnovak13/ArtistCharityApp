@@ -23,7 +23,8 @@ class Artist < ActiveRecord::Base
   }
   has_attached_file :pic_main, styles: {
     main: '1000x500#',
-    medium: '800x400>'
+    medium: '800x400>',
+    large: '1500x750>'
   }
 
   # Validate the attached image is image/jpg, image/png, etc
