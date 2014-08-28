@@ -26,5 +26,15 @@
 .size-72 { font-size: 72px; }
 
 @import 'artist';
+@import 'foundation-icons';
+@import 'home';
+// @import "sticky-footer";
 
-
+// // Footer
+// @include sticky-footer(50px);
+footer {
+  margin-top: 0em;
+  background-color: black;
+  height: 52px;
+  color: white !important;
+}
