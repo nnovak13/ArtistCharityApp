@@ -1,3 +1,13 @@
+// @import "sticky-footer";
+
+// // Footer
+// @include sticky-footer(50px);
+footer {
+  margin-top: 0em;
+  background-color: black;
+  height: 52px;
+  color: white !important;
+}
 a {
   text-decoration: none !important;
   background-color: transparent;
