@@ -21,8 +21,7 @@
 class Item < ActiveRecord::Base
   belongs_to :artist
 
-
-  # This method associates the attribute ":avatar" with a file attachment
+  # This method associates the attribute ":pic" with a file attachment
   has_attached_file :pic, styles: {
     thumb: '100x100>',
     square: '200x200#',

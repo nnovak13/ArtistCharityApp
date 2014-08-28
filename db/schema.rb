@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140827182624) do
+ActiveRecord::Schema.define(version: 20140828162122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,14 @@ ActiveRecord::Schema.define(version: 20140827182624) do
     t.string   "contact_email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "pic_thumb_file_name"
+    t.string   "pic_thumb_content_type"
+    t.integer  "pic_thumb_file_size"
+    t.datetime "pic_thumb_updated_at"
+    t.string   "pic_main_file_name"
+    t.string   "pic_main_content_type"
+    t.integer  "pic_main_file_size"
+    t.datetime "pic_main_updated_at"
   end
 
   create_table "items", force: true do |t|
@@ -72,8 +80,6 @@ ActiveRecord::Schema.define(version: 20140827182624) do
     t.decimal  "price"
     t.integer  "quantity_available"
     t.text     "desc"
-    t.string   "img_main"
-    t.string   "img_thumb"
     t.integer  "artist_id"
     t.datetime "created_at"
     t.datetime "updated_at"
