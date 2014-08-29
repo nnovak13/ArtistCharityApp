@@ -19,9 +19,8 @@
   <div class="logo_description">
    <div class="hidden" id="artists_pics">
      <% @artists.each do |a| %>
-       <div id="artist_image"><%= link_to(image_tag(a.pic_thumb(:square), class:"artist-square"), artist_path(a)) %>
+       <%= link_to(image_tag(a.pic_thumb(:square), class:"artist-square"), artist_path(a)) %>
           <div class="hidden" id="artist_name"><%= a.name%></div>
-        </div>
      <% end %>
      <br><br>
      <div class="back_artists"><i class="fi-arrow-left size-24"></i></div>
