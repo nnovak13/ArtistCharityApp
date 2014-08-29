@@ -3,17 +3,23 @@
 // // Footer
 // @include sticky-footer(50px);
 footer {
-  margin-top: 0em;
   background-color: black;
   height: 52px;
   color: white !important;
+  margin-top: 0em;
+  // width:100;
 }
+
+#text-center {
+  // width:100%;
+}
+
 a {
   text-decoration: none !important;
   background-color: transparent;
 }
 
- .logo_title {
+.logo_title {
   padding-top: 50px;
   margin: 30px;
   font-size: 130px;
@@ -37,14 +43,65 @@ a {
 margin-top: -45px;
 }
 
-.artists {
+#artists {
   padding: 15px;
 }
 
-.posts {
+#articles {
   padding: 15px;
 }
 
-.about {
+#about {
   padding: 15px;
+}
+
+#about_text {
+  font-size: 40px;
+  padding: 0px;
+  margin: 0;
+  float: center !important;
+}
+
+#artists_pics {
+  margin-bottom: 0px;
+}
+
+#artist_name {
+
+  background: rgba(0,0,0,0.3);
+}
+
+.about_text_interior {
+  font-size: 28px;
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none !important;
+  background: transparent !important;
+}
+.visible {
+  visibility: visible;
+  display: block !important;
+  background: transparent !important;
+}
+
+.back_about {
+  font-size: 18px;
+}
+
+.back_artists {
+  font-size: 18px;
+  margin-top: -20px;
+}
+
+.back_articles {
+  font-size: 18px;
+  margin-bottom: 130px;
+}
+
+.hovering {
+  opacity: 1;
 }

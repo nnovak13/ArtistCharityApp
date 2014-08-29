@@ -1,6 +1,6 @@
-$(document).ready(function(){
-  home();
-});
-$(document).on('page:load', function() {
-  home();
+$(document).on('ready, page:change', function() {
+
+
+  console.log("document was ready");
+  Home.omg();
 });

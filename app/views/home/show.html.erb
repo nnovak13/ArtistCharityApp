@@ -17,19 +17,45 @@
 
 <div class="row">
   <div class="logo_description">
+   <div class="hidden" id="artists_pics">
+     <% @artists.each do |a| %>
+       <div id="artist_image"><%= link_to(image_tag(a.pic_thumb(:square), class:"artist-square"), artist_path(a)) %>
+          <div class="hidden" id="artist_name"><%= a.name%></div>
+        </div>
+     <% end %>
+     <br><br>
+     <div class="back_artists"><i class="fi-arrow-left size-24"></i></div>
+    </div>
+
+   <div class="hidden" id="articles_list">
+     <% @articles.each do |a| %>
+       <%= link_to a.title, ( article_path(a))%>
+       <!-- ).limit(3).order(a.created_at)  -->
+     <% end %>
+     <br><br>
+     <div class="back_articles"><i class="fi-arrow-left size-24"></i></div>
+   </div>
+
+   <div class="hidden" id="about_text">
+    is a not-for-profit online platform for emerging art.<br><br>
+    <div class="about_text_interior">
+     we talk to artists.<br><br> sometimes, we sell their art.<br><br> the profit goes to the artist and to charity.
+     <br><br>
+     <div class="back_about"><i class="fi-arrow-left size-24"></i></div>
+    </div>
+  </div>
+
     <div class="large-1 large-centered columns">
-      <div class="artists">ARTISTS</div>
+      <div class="visible" id="artists">ARTISTS</div>
 
-      <div class="posts">POSTS</div>
+      <div class="visible" id="articles">ARTICLES</div>
 
-      <div class="about">ABOUT </div>
+      <div class="visible" id="about">ABOUT</div>
     </div>
   </div>
 </div>
 
-
-
- <footer id="footer", class="text-center">
-      By <%= link_to "Brian", "https://github.com/brimatteng", target: "_blank" %> & <%= link_to "Nick", "https://github.com/nnovak13", target: "_blank" %>
-    </footer>
-
+<!-- <div class ="row"> -->
+ <footer id="footer", class="text-center">By <%= link_to "Brian", "https://github.com/brimatteng", target: "_blank" %> & <%= link_to "Nick", "https://github.com/nnovak13", target: "_blank" %>
+  </footer>
+<!-- </div> -->

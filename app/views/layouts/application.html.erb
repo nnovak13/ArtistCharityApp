@@ -30,7 +30,7 @@
         <li><%= link_to 'Artists', artists_path %></li>
         <li><%= link_to 'Articles', articles_path %></li>
         <li><%= link_to 'Items', items_path %></li>
-          <% if user_signed_in? %>
+<!--           <% if user_signed_in? %>
             <li class="has-dropdown">
               <%= link_to "#" do %>
                 <i class="fi-torso"></i> <%= current_user.username %>
@@ -43,7 +43,7 @@
           <% else %>
             <li class = "sign"><%= link_to "Sign up", new_user_registration_path %></li>
             <li lass = "sign"><%= link_to "Login", new_user_session_path %></li>
-          <% end %>
+          <% end %> -->
         </ul>
       </section>
     </nav>

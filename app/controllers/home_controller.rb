@@ -2,7 +2,8 @@ class HomeController <ApplicationController
 
   def show
     @artists = Artist.all
-     @video_ref= videos.sample
+    @articles = Article.all
+    @video_ref= videos.sample
   end
 
   private
