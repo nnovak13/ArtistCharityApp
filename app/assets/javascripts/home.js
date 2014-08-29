@@ -21,7 +21,7 @@ var showArtists = function() {
 };
 
 var artistName = function() {
-  $('#artists').addClass('hovering').fadeIn(900);
+  $('#artists_pics').addClass('hovering').fadeIn(900);
 };
 
 var goBackArtists = function() {
@@ -58,5 +58,3 @@ var goBackAbout = function() {
   $('#about').removeClass('hidden').addClass('visible').fadeIn(900);
   $('#about_text').removeClass('visible').addClass('hidden').fadeIn();
 };
-
-

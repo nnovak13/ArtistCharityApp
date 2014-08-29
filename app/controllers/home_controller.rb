@@ -2,7 +2,7 @@ class HomeController <ApplicationController
 
   def show
     @artists = Artist.all
-    @articles = Article.all
+    @articles = Article.all.limit(3).order(:created_at)
     @video_ref= videos.sample
   end
 
