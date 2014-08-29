@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="large-12 medium-12 columns">
+    <h1 class="artist-name"><%= @article.title %></h1>
+    <%= image_tag(@article.pic(:large), class:"headerpic") %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12">
+    <p><%= @article.body %> </p>
+  </div>
+</div>

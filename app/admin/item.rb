@@ -16,4 +16,10 @@ permit_params :title, :price, :quantity_available, :desc, :pic, :artist_id
     f.actions
   end
 
+ index do
+    column :title
+    column :id
+    column :artist_id
+    actions
+  end
 end
