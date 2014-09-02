@@ -28,7 +28,7 @@
 
    <div class="hidden" id="articles_list">
      <% @articles.each do |a| %>
-       <%= link_to a.title, ( article_path(a))%>
+       <%= link_to a.title, ( article_path(a))%><br><br>
      <% end %>
      <br><br>
      <div class="back_articles"><i class="fi-arrow-left size-36"></i></div>
