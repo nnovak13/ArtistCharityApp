@@ -1,6 +1,16 @@
-<div class="large-12 columns artist-square">
-  <h1> Artists </h1>
-  <% @artists.each do |a| %>
-    <%= link_to(image_tag(a.pic_thumb(:square), class:"artist-square"), artist_path(a)) %>
-  <% end %>
+<div class="row">
+
+  <div class="small-1 large-1 columns">&nbsp;</div>
+
+  <div class="small-10 large-10 columns">
+    <h1>Artists</h1>
+      <h4>This is the yearbook page where we show the portraits of some really great artists...</h4>
+
+    <% @artists.each do |a| %>
+      <%= link_to(image_tag(a.pic_thumb(:square), class:"artist-square"), artist_path(a)) %>
+    <% end %>
+  </div>
+
+  <div class="small-1 large-1 columns">&nbsp;</div>
+
 </div>

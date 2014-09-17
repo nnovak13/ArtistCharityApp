@@ -1,0 +1,18 @@
+<div class="row">
+
+  <div class="small-1 large-1 columns">&nbsp;</div>
+
+  <div class="small-10 large-10 columns">
+    <h1>Blog</h1>
+      <h4>This is the blog page where we write lots of great articles about great things...</h4>
+
+    <% @articles.each do |article| %>
+      <%= image_tag(article.pic(:large), class:"headerpic") %>
+      <h2><%= article.title %></h2>
+      <%= article.body %><br><br><br><br>
+    <% end %>
+  </div>
+  <!-- KM: Why were there pipes in the small columns? Are you just trying to hold the space because it collapses if you don't have them? I inserted a space character &nbsp; instead -->
+  <div class="small-1 large-1 columns">&nbsp;</div>
+
+</div>

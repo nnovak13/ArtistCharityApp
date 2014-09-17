@@ -1,0 +1,23 @@
+<div class="row">
+
+  <div class="small-1 large-1 columns">&nbsp;</div>
+
+  <div class="small-10 large-10 columns">
+    <h1>Items</h1>
+      <h4>I'm not even totally sure what this page is for but I think it might be for selling things...</h4>
+    <% @items.each do |i| %>
+      <ul>
+        <li>
+          <h3><%= i.title %></h3>
+          <%= image_tag i.pic.url(:square) %> <br>
+          <%= i.price %> <br>
+          <%= i.desc %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+
+  <div class="small-1 large-1 columns">&nbsp;</div>
+
+</div>
+
