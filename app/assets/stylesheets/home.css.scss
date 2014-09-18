@@ -4,15 +4,17 @@
 // @include sticky-footer(50px);
 footer {
   background-color: black;
-  height: 52px;
-  color: white !important;
+  height: 100px;
+  color: rgba(255,255,255,0.5);
   margin-top: 0em;
-  // width:100;
+  padding: 20px;
+  font-size: 10px;
+  a {
+    color: rgba(255,255,255,0.7);
+  }
 }
 
-#text-center {
-  // width:100%;
-}
+
 
 a {
   text-decoration: none !important;
@@ -20,62 +22,52 @@ a {
 }
 
 .logo_title {
-  padding-top: 50px;
-  margin: 30px;
-  font-size: 130px;
-  text-align: center;
+  padding-top: 40vh;
+  margin-bottom: 30px;
+  font-size: 100px;
   color: white;
  }
 
- .sticky {
+ #about-text {
+  font-size: 18px;
+  color: white;
+  padding: 40vh 3vw 10vh 3vw;
+  background-color: rgba(0,0,0,0.5)
+}
+
+.sticky {
   font-weight: bold;
 }
 
 .logo_description {
-  padding: 10px;
-  margin: 10px;
   font-size: 50px;
-  text-align: center;
   color: white;
 }
 
 .w-embed {
-margin-top: -45px;
+  margin-top: -45px;
 }
 
-#artists {
-  padding: 15px;
+.menu-link {
+  color: white;
+  font-size: 24px;
+  display: inline-block;
+  margin-right: 20px;
 }
 
-#articles {
-  padding: 15px;
-}
 
-#about {
-  padding: 15px;
-}
 
-#about_text {
-  font-size: 40px;
-  padding: 0px;
-  margin: 0;
-  float: center !important;
-}
+
 
 #artists_pics {
   margin-bottom: 0px;
 }
 
 #artist_name {
-
   background: rgba(0,0,0,0.3);
 }
 
-.about_text_interior {
-  font-size: 28px;
-  padding-bottom: 0px;
-  margin: 0px;
-}
+
 
 .hidden {
   visibility: hidden;
@@ -86,10 +78,6 @@ margin-top: -45px;
   visibility: visible;
   display: block !important;
   background: transparent !important;
-}
-
-.back_about {
-  font-size: 18px;
 }
 
 .back_artists {

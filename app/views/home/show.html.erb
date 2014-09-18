@@ -1,5 +1,4 @@
 <div class="w-embed">
-
   <video muted autoplay="" loop="" style="width:100%; height: auto; position:absolute; z-index: -1;">
     <source src="<%= @video_ref %>" type="video/mp4">
     <!-- <source src="http://syddev.com/jquery.videoBG/assets/tunnel_animation.ogv" type="application/ogg"> -->
@@ -7,53 +6,77 @@
 </div>
 
 <div class="row">
-  <div></div>
-  <div class="small-6 large-centered columns">
-    <div class="logo_title" id ="logo_title">
-      <a></a>SABES
-    </div>
-  </div>
-</div>
 
+  <div class="small-1 large-1 columns">&nbsp;</div>
+  <div class="small-5 large-5 columns">
+    <div class="logo_title" id="logo_title">
+      Sabes
+    </div>
+    <div class="menu-link" id="artists">Artists</div>
+    <div class="menu-link" id="articles">Articles</div>
+
+  </div>
+  <div class="small-5 large-5 columns">
+    <p id="about-text">Sabes is a not-for-profit online platform for emerging art. We talk to artists. Sometimes, we sell their art. The profit goes to the artist and to charity.</p>
+  </div>
+
+  <div class="small-1 large-1 columns">&nbsp;</div>
+
+</div>
+<!-- End title section -->
+
+<!-- Artist Yearbook section -->
 <div class="row">
-  <div class="logo_description">
-   <div class="hidden" id="artists_pics">
-     <% @artists.each do |a| %>
-       <%= link_to(image_tag(a.pic_thumb(:square), class:"artist-square"), artist_path(a)) %>
-          <div class="hidden" id="artist_name"><%= a.name%></div>
-     <% end %>
-     <br><br>
-     <div class="back_artists"><i class="fi-arrow-left size-36"></i></div>
-    </div>
 
-   <div class="hidden" id="articles_list">
-     <% @articles.each do |a| %>
-       <%= link_to a.title, ( article_path(a))%><br><br>
-     <% end %>
-     <br><br>
-     <div class="back_articles"><i class="fi-arrow-left size-36"></i></div>
-   </div>
+  <div class="small-1 large-1 columns">&nbsp;</div>
 
-   <div class="hidden" id="about_text">
-    is a not-for-profit online platform for emerging art.<br><br>
-    <div class="about_text_interior">
-     we talk to artists.<br><br> sometimes, we sell their art.<br><br> the profit goes to the artist and to charity.
-     <br><br>
-     <div class="back_about"><i class="fi-arrow-left size-36"></i></div>
-    </div>
-  </div>
+  <div class="small-10 large-10 columns">
+    <div class="logo_description">
+      <div class="hidden" id="artists_pics">
+        <% @artists.each do |a| %>
+          <%= link_to(image_tag(a.pic_thumb(:square), class:"artist-square"), artist_path(a)) %>
+          <div class="hidden" id="artist_name">
+            <%= a.name%>
+          </div>
+        <% end %>
 
-    <div class="large-1 large-centered columns">
-      <div class="visible" id="artists">ARTISTS</div>
+        <div class="back_artists">
+          <i class="fi-arrow-left size-36"></i>
+        </div>
 
-      <div class="visible" id="articles">ARTICLES</div>
+      </div> <!-- End artist pics div -->
+    </div> <!-- End logo description div -->
+  </div> <!-- End 10 columns div -->
 
-      <div class="visible" id="about">ABOUT</div>
-    </div>
-  </div>
-</div>
+  <div class="small-1 large-1 columns">&nbsp;</div>
+</div> <!-- End row -->
+<!-- End artist section -->
+
+<!-- Articles section -->
+<div class="row">
+
+  <div class="small-1 large-1 columns">&nbsp;</div>
+
+  <div class="small-10 large-10 columns">
+    <div class="hidden" id="articles_list">
+      <% @articles.each do |a| %>
+        <%= link_to a.title, ( article_path(a))%>
+      <% end %>
+
+      <div class="back_articles">
+        <i class="fi-arrow-left size-36"></i>
+      </div>
+
+    </div> <!-- End articles list div -->
+  </div> <!-- End 10 columns div -->
+  <div class="small-1 large-1 columns">&nbsp;</div>
+  </div> <!-- End row -->
+<!-- End Articles section -->
+
+
 
 <!-- <div class ="row"> -->
- <footer id="footer", class="text-center">By <%= link_to "Brian", "https://github.com/brimatteng", target: "_blank" %> & <%= link_to "Nick", "https://github.com/nnovak13", target: "_blank" %>
-  </footer>
+<footer id="footer">
+ <p>Created by <%= link_to "Brian Tenggren", "https://github.com/brimatteng", target: "_blank" %> & <%= link_to "Nick Novak", "https://github.com/nnovak13", target: "_blank" %></p>
+</footer>
 <!-- </div> -->
